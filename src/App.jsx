@@ -1,7 +1,7 @@
+import { useState } from "react";
 import Navbar from "./components/Navbar";
 import PokemonCards from "./components/PokemonCards";
 import "./App.css";
-import { useState } from "react";
 
 function App() {
   const [currentPage, setCurrentPage] = useState(

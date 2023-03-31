@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
 import "./Card.css"
 
@@ -10,10 +11,10 @@ function Card({ pokemon }) {
   useEffect(() => {
     fetch(pokemon.url)
     .then(res => res.json())
-    .then(pokemon => {
-      setPokemonName(pokemon.name)
-      setTypes(pokemon.types.map(type => type.type.name))
-      setImage(pokemon.sprites.front_default)
+    .then(poke => {
+      setPokemonName(poke.name)
+      setTypes(poke.types.map(type => type.type.name))
+      setImage(poke.sprites.front_default)
     })
     }, [])
 

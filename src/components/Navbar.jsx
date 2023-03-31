@@ -1,13 +1,15 @@
+/* eslint-disable react/prop-types */
 import "./Navbar.css"
+import logo from"../assets/Pokédex_logo.png"
 
 function Navbar(props) {
-
+  const { setPreviousPage, setNextPage} = props
   return ( 
     <div className="navbar">
-      <h1>Pokedex</h1>
+      <img src={logo} alt="logo" height={100} />
       <div>
-        {props.setPreviousPage && <button type="button" onClick={props.setPreviousPage}>Página anterior</button>}
-        {props.setNextPage && <button type="button" onClick={props.setNextPage}>Próxima página</button>}
+        {setPreviousPage && <button type="button" onClick={setPreviousPage}>Página anterior</button>}
+        {setNextPage && <button type="button" onClick={setNextPage}>Próxima página</button>}
       </div>
     </div>
    );
