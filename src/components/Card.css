@@ -1,0 +1,14 @@
+.card {
+  text-align: center;
+  width: max-content;
+  background-color: cornflowerblue;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.pokemon {
+  font-size: 18px;
+  text-transform: capitalize;
+  font-weight: bold;
+}
